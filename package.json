@@ -6,12 +6,15 @@
   "scripts": {
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
-    "migrate": "postgrator --config postgrator-config.js",
+    "migrate": "postgrator --config postgrator-production-config.js",
     "start": "node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
   },
   "keywords": [],
+  "engines": {
+    "node": "12.4.0"
+  },
   "author": "Tom `tomatao` HT <tomht@thinkful.com>",
   "license": "MIT",
   "dependencies": {
